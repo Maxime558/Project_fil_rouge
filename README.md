@@ -74,19 +74,19 @@ N'hésite pas à contribuer en partageant tes idées ou en proposant des fonctio
 
 - ### Le site web (Version Mobile)
 
-![](https://github.com/MaximeLottin/Project-fil-rouge/blob/main/assets/images/images_readme/Sreenshot%20Mobile1.png)
+![](https://github.com/MaximeLottin/Project_fil_rouge/blob/main/assets/images/images_readme/Sreenshot%20Mobile1.png)
 
 - ### Le site web (Version Desktop)
 
-![](https://github.com/MaximeLottin/Project-fil-rouge/blob/main/assets/images/images_readme/Sreenshot%20Desktop1.png)
+![](https://github.com/MaximeLottin/Project_fil_rouge/blob/main/assets/images/images_readme/Sreenshot%20Desktop1.png)
 
 - ### Le menu de connexion
 
-![](https://github.com/MaximeLottin/Project-fil-rouge/blob/main/assets/images/images_readme/gif-connexion.gif)
+![](https://github.com/MaximeLottin/Project_fil_rouge/blob/main/assets/images/images_readme/gif-connexion.gif)
 
 - ### La barre de recherche
 
-![](https://github.com/MaximeLottin/Project-fil-rouge/blob/main/assets/images/images_readme/gif-recherche.gif)
+![](https://github.com/MaximeLottin/Project_fil_rouge/blob/main/assets/images/images_readme/gif-recherche.gif)
 
 ## Comment Utiliser
 
