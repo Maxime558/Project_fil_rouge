@@ -20,11 +20,13 @@
     />
   </head>
   <body>
-    <a href="../index.html" class="return-button" title="Retour au menu">Retour au menu</a>
+    <a href="../index.html" class="return-button" title="Retour au menu"
+      >Retour au menu</a
+    >
     <div class="placement">
       <div class="container">
         <div class="div"></div>
-        <h1>Inscription :</h1>
+        <h1>S'inscrire</h1>
         <form action="inscription.php" method="post">
           <input type="email" name="mail" placeholder="Email" required />
           <input
@@ -40,9 +42,11 @@
             required
           />
           <label id="birthday">Date de Naissance</label>
-          <select id="day" name="day" required></select>
-          <select id="month" name="month" required></select>
-          <select id="year" name="year" required></select>
+          <div class="date-selection">
+            <select id="day" name="day" required></select>
+            <select id="month" name="month" required></select>
+            <select id="year" name="year" required></select>
+          </div>
           <input type="submit" value="S'inscrire" />
         </form>
         <p class="register-link">
