@@ -124,3 +124,8 @@ a {
 a:hover {
   color: #0056b3;
 }
+#submit-button[disabled] {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
