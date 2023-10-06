@@ -36,3 +36,32 @@ months.forEach((month, index) => {
 
 const currentYear = new Date().getFullYear();
 generateOptions(yearSelect, 1900, currentYear);
+
+//  ██████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗      ██████╗ ██████╗ ██╗     ██╗ ██████╗  █████╗ ████████╗ ██████╗ ██╗██████╗ ███████╗    
+// ██╔════╝██║  ██║██╔══██╗████╗ ████║██╔══██╗    ██╔═══██╗██╔══██╗██║     ██║██╔════╝ ██╔══██╗╚══██╔══╝██╔═══██╗██║██╔══██╗██╔════╝    
+// ██║     ███████║███████║██╔████╔██║██████╔╝    ██║   ██║██████╔╝██║     ██║██║  ███╗███████║   ██║   ██║   ██║██║██████╔╝█████╗      
+// ██║     ██╔══██║██╔══██║██║╚██╔╝██║██╔═══╝     ██║   ██║██╔══██╗██║     ██║██║   ██║██╔══██║   ██║   ██║   ██║██║██╔══██╗██╔══╝      
+// ╚██████╗██║  ██║██║  ██║██║ ╚═╝ ██║██║         ╚██████╔╝██████╔╝███████╗██║╚██████╔╝██║  ██║   ██║   ╚██████╔╝██║██║  ██║███████╗    
+//  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝          ╚═════╝ ╚═════╝ ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝╚══════╝    
+
+
+const emailInput = document.querySelector('input[name="mail"]');
+const usernameInput = document.querySelector('input[name="username"]');
+const passwordInput = document.querySelector('input[name="password"]');
+const submitButton = document.getElementById('submit-button');
+
+function checkRequiredFields() {
+  if (
+    emailInput.value.trim() !== '' &&
+    usernameInput.value.trim() !== '' &&
+    passwordInput.value.trim() !== ''
+  ) {
+    submitButton.removeAttribute('disabled');
+  } else {
+    submitButton.setAttribute('disabled', 'disabled');
+  }
+}
+
+emailInput.addEventListener('input', checkRequiredFields);
+usernameInput.addEventListener('input', checkRequiredFields);
+passwordInput.addEventListener('input', checkRequiredFields);
