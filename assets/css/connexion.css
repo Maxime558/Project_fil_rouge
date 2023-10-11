@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Lato-Light";
+  src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "Lato-Italic";
+  src: url(../fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url(../fonts/Lato-Thin.ttf);
+}
+
 /*
  ██████╗ ███████╗███████╗███████╗████████╗
  ██╔══██╗██╔════╝██╔════╝██╔════╝╚══██╔══╝
@@ -11,7 +28,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: inherit, sans-serif;
+  font-family: "Lato-Light", "sans-serif";
   box-sizing: border-box;
   --imagewidth: 70%;
   --messagewidth: 95%;
@@ -116,13 +133,13 @@ input[type="submit"]:hover {
 }
 
 a {
-  color: #007bff;
+  color: rgb(33, 66, 253);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #ffffff;
 }
 #submit-button[disabled] {
   background-color: gray;
