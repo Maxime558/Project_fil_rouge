@@ -1,73 +1,56 @@
-OnlineWebFonts_Com({
-    'Id':'.div',
-    'Data':__Animations['264570'],
-}).Play();
+/* 
 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗      █████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝██║     ███████║ ╚████╔╝ 
+██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗██║     ██╔══██║  ╚██╔╝  
+╚██████╔╝ ╚████╔╝ ███████╗██║  ██║███████╗██║  ██║   ██║   
+ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   
+*/
 
-// ██╗      █████╗ ██████╗ ███████╗██╗         ██████╗ ██╗██████╗ ████████╗██╗  ██╗██████╗  █████╗ ██╗   ██╗
-// ██║     ██╔══██╗██╔══██╗██╔════╝██║         ██╔══██╗██║██╔══██╗╚══██╔══╝██║  ██║██╔══██╗██╔══██╗╚██╗ ██╔╝
-// ██║     ███████║██████╔╝█████╗  ██║         ██████╔╝██║██████╔╝   ██║   ███████║██║  ██║███████║ ╚████╔╝ 
-// ██║     ██╔══██║██╔══██╗██╔══╝  ██║         ██╔══██╗██║██╔══██╗   ██║   ██╔══██║██║  ██║██╔══██║  ╚██╔╝  
-// ███████╗██║  ██║██████╔╝███████╗███████╗    ██████╔╝██║██║  ██║   ██║   ██║  ██║██████╔╝██║  ██║   ██║   
-// ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝    ╚═════╝ ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   
-//                                                                                                          
-
-const daySelect = document.getElementById("day");
-const monthSelect = document.getElementById("month");
-const yearSelect = document.getElementById("year");
-
-
-function generateOptions(select, start, end) {
-  for (let i = start; i <= end; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.text = i;
-    select.appendChild(option);
-  }
+function showOverlay() {
+  document.getElementById("overlay").style.display = "block";
 }
 
-generateOptions(daySelect, 1, 31);
+function hideOverlay() {
+  document.getElementById("overlay").style.display = "none";
+}
 
-const months = [
-  "Janvier", "Février", "Mars", "Avril",
-  "Mai", "Juin", "Juillet", "Août",
-  "Septembre", "Octobre", "Novembre", "Décembre"
-];
-months.forEach((month, index) => {
-  const option = document.createElement("option");
-  option.value = index + 1;
-  option.text = month;
-  monthSelect.appendChild(option);
+showOverlay();
+
+setTimeout(function () {
+  hideOverlay();
+}, 600);
+
+/*   
+ ██████╗  █████╗  ██████╗ ███████╗     ██████╗ ██████╗ ███╗   ██╗███╗   ██╗███████╗██╗  ██╗██╗ ██████╗ ███╗   ██╗
+ ██╔══██╗██╔══██╗██╔════╝ ██╔════╝    ██╔════╝██╔═══██╗████╗  ██║████╗  ██║██╔════╝╚██╗██╔╝██║██╔═══██╗████╗  ██║
+ ██████╔╝███████║██║  ███╗█████╗      ██║     ██║   ██║██╔██╗ ██║██╔██╗ ██║█████╗   ╚███╔╝ ██║██║   ██║██╔██╗ ██║
+ ██╔═══╝ ██╔══██║██║   ██║██╔══╝      ██║     ██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝   ██╔██╗ ██║██║   ██║██║╚██╗██║
+ ██║     ██║  ██║╚██████╔╝███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗██╔╝ ██╗██║╚██████╔╝██║ ╚████║
+ ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+*/
+
+
+const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
 });
 
-const currentYear = new Date().getFullYear();
-generateOptions(yearSelect, 1900, currentYear);
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
 
-//  ██████╗██╗  ██╗ █████╗ ███╗   ███╗██████╗      ██████╗ ██████╗ ██╗     ██╗ ██████╗  █████╗ ████████╗ ██████╗ ██╗██████╗ ███████╗    
-// ██╔════╝██║  ██║██╔══██╗████╗ ████║██╔══██╗    ██╔═══██╗██╔══██╗██║     ██║██╔════╝ ██╔══██╗╚══██╔══╝██╔═══██╗██║██╔══██╗██╔════╝    
-// ██║     ███████║███████║██╔████╔██║██████╔╝    ██║   ██║██████╔╝██║     ██║██║  ███╗███████║   ██║   ██║   ██║██║██████╔╝█████╗      
-// ██║     ██╔══██║██╔══██║██║╚██╔╝██║██╔═══╝     ██║   ██║██╔══██╗██║     ██║██║   ██║██╔══██║   ██║   ██║   ██║██║██╔══██╗██╔══╝      
-// ╚██████╗██║  ██║██║  ██║██║ ╚═╝ ██║██║         ╚██████╔╝██████╔╝███████╗██║╚██████╔╝██║  ██║   ██║   ╚██████╔╝██║██║  ██║███████╗    
-//  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝          ╚═════╝ ╚═════╝ ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝╚══════╝    
-
-
-const emailInput = document.querySelector('input[name="mail"]');
-const usernameInput = document.querySelector('input[name="username"]');
-const passwordInput = document.querySelector('input[name="password"]');
-const submitButton = document.getElementById('submit-button');
-
-function checkRequiredFields() {
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
   if (
-    emailInput.value.trim() !== '' &&
-    usernameInput.value.trim() !== '' &&
-    passwordInput.value.trim() !== ''
+    urlParams.has("ajouterClasse") &&
+    urlParams.get("ajouterClasse") === "true"
   ) {
-    submitButton.removeAttribute('disabled');
-  } else {
-    submitButton.setAttribute('disabled', 'disabled');
+    const maDiv = document.getElementById("container");
+    maDiv.classList.add("right-panel-active");
   }
-}
-
-emailInput.addEventListener('input', checkRequiredFields);
-usernameInput.addEventListener('input', checkRequiredFields);
-passwordInput.addEventListener('input', checkRequiredFields);
+});
