@@ -5,21 +5,18 @@
 // ██║██║ ╚████║██║     ╚██████╔╝    ██████╔╝╚██████╔╝███████╗███████╗███████╗
 // ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝     ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
                                                                          
-// Sélectionnez tous les éléments avec la classe "tooltip"
+
 const tooltips = document.querySelectorAll(".tooltip");
 
-// Parcourez chaque infobulle
 tooltips.forEach((tooltip) => {
   let timeoutId;
 
-  // Lorsque la souris survole l'élément parent, activez l'infobulle après un délai de 500 ms
   tooltip.parentElement.addEventListener("mouseover", () => {
     timeoutId = setTimeout(() => {
       tooltip.classList.add("active");
     }, 500);
   });
 
-  // Lorsque la souris quitte l'élément parent, annulez le délai et désactivez l'infobulle
   tooltip.parentElement.addEventListener("mouseout", () => {
     clearTimeout(timeoutId);
     tooltip.classList.remove("active");
@@ -33,27 +30,26 @@ tooltips.forEach((tooltip) => {
 // ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗██╔╝ ██╗██║╚██████╔╝██║ ╚████║
 // ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
                                                                                                                      
-// Sélectionnez l'icône de connexion et le menu de connexion
+
 const connexionIcon = document.getElementById("connexion-icon");
 const connexionMenu = document.getElementById("connexion-menu");
 const notif4 = document.getElementById("notif4");
 
 let connexionMenuVisible = false;
 
-// Fonction pour masquer le menu de connexion
+
 function hideConnexionMenu() {
   connexionMenu.classList.remove("active");
   connexionMenuVisible = false;
 }
 
-// Fonction pour afficher le menu de connexion
 function showConnexionMenu() {
-  hideSearchBar(); // Masque la barre de recherche lorsque le menu de connexion est ouvert
+  hideSearchBar(); // 
   connexionMenu.classList.add("active");
   connexionMenuVisible = true;
 }
 
-// Événement de clic sur l'icône de connexion
+
 connexionIcon.addEventListener("click", (event) => {
   if (window.innerWidth < 1400) {
     if (connexionMenu.classList.contains("active")) {
@@ -65,7 +61,7 @@ connexionIcon.addEventListener("click", (event) => {
   }
 });
 
-// Événement de clic sur l'icône de notification
+
 notif4.addEventListener("click", (event) => {
   if (window.innerWidth >= 1400) {
     if (connexionMenuVisible) {
@@ -77,14 +73,13 @@ notif4.addEventListener("click", (event) => {
   }
 });
 
-// Événement de clic en dehors du menu de connexion pour le masquer
+
 document.addEventListener("click", () => {
   if (connexionMenuVisible) {
     hideConnexionMenu();
   }
 });
 
-// Événement de clic dans le menu de connexion pour empêcher la propagation du clic
 connexionMenu.addEventListener("click", (event) => {
   event.stopPropagation();
 });
@@ -96,20 +91,18 @@ connexionMenu.addEventListener("click", (event) => {
 // ██████╔╝██║  ██║██║  ██║██║  ██║███████╗    ██████╔╝███████╗    ██║  ██║███████╗╚██████╗██║  ██║███████╗██║  ██║╚██████╗██║  ██║███████╗
 // ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ╚═════╝ ╚══════╝    ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
                                                                                                                                         
-// Sélectionnez l'élément de notification pour la barre de recherche
+
 const tooltipNotif3 = document.getElementById("affichage-barre");
 const searchIcon = document.getElementById("recherche");
 const searchBar = document.getElementById("search-bar");
 
 let searchBarVisible = false;
 
-// Fonction pour masquer la barre de recherche
 function hideSearchBar() {
   searchBar.classList.add("hidden");
   searchBarVisible = false;
 }
 
-// Événement de clic sur l'icône de notification pour afficher/masquer la barre de recherche
 tooltipNotif3.addEventListener("click", (event) => {
   if (window.innerWidth >= 1400) {
     if (searchBarVisible) {
@@ -122,17 +115,15 @@ tooltipNotif3.addEventListener("click", (event) => {
   }
 });
 
-// Événement de clic dans la barre de recherche pour empêcher la propagation du clic
+
 searchBar.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-// Événement de clic en dehors de la barre de recherche pour la masquer
 document.addEventListener("click", () => {
   hideSearchBar();
 });
 
-// Événement de clic sur l'icône de recherche pour afficher/masquer la barre de recherche (pour les écrans plus petits)
 searchIcon.addEventListener("click", (event) => {
   if (window.innerWidth < 1400) {
     searchBar.classList.toggle("hidden");
