@@ -32,6 +32,7 @@
   box-sizing: border-box;
   --imagewidth: 70%;
   --messagewidth: 95%;
+  --sombre : #202b38;
 }
 html {
   scroll-behavior: smooth;
@@ -48,7 +49,7 @@ html {
 
 .sidebar {
   width: 100px;
-  background-color: #000000;
+  background-color: var(--sombre);
   color: #fff;
   position: fixed;
   height: 100%;
@@ -140,7 +141,7 @@ html {
 */
 
 .connexion-menu {
-  background-color: #161616;
+  background-color: #2a394a;
   color: #333;
   border: solid rgba(211, 211, 211, 0.205) 1px;
   position: relative;
@@ -158,7 +159,7 @@ html {
 }
 .connexion-menu a {
   display: block;
-  color: #333;
+  color: 2a728c;
   text-decoration: none;
   padding: 15px 0;
 }
@@ -219,6 +220,7 @@ html {
 @media (min-width: 1400px) {
   .content {
     margin-right: 25%;
+    margin-left: 17%;
   }
   #logo {
     width: 40%;
@@ -227,6 +229,9 @@ html {
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+  .sidebar {
+  width: 17%;
   }
 
   .sidebar ul li {
@@ -253,7 +258,7 @@ html {
     display: block;
     visibility: visible;
     opacity: 1;
-    background-color: #000000;
+    background-color: var(--sombre);
     text-align: left;
     font-size: 1.4rem;
     width: 50%;

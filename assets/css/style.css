@@ -32,12 +32,13 @@
   box-sizing: border-box;
   --imagewidth: 70%;
   --messagewidth: 95%;
+  --sombre : #202b38;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: black;
+  background-color: var(--sombre)
 }
 
 /*
@@ -63,7 +64,7 @@ body {
 
 .home {
   width: 100%;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .profil {
@@ -87,7 +88,7 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   word-wrap: break-word;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .message {
@@ -178,12 +179,13 @@ body {
 #search-bar input {
   width: 95%;
   padding: 1rem;
-  background-color: #21242a;
+  background-color: #2a394a;
   border: none;
   border-radius: 27px 27px 27px 27px;
   -webkit-border-radius: 27px 27px 27px 27px;
   -moz-border-radius: 27px 27px 27px 27px;
   margin: 5px 0;
+  color: white;
 }
 .sidebar-right {
   display: none;
@@ -219,7 +221,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: var(--sombre);
   display: none;
 }
 .mysuggestion {
@@ -251,12 +253,13 @@ body {
   font-size: 1rem;
 }
 .background {
-  background-color: #161616;
+  background-color: #2a394a;
   border-radius: 27px 27px 27px 27px;
   -webkit-border-radius: 27px 27px 27px 27px;
   -moz-border-radius: 27px 27px 27px 27px;
   width: 80%;
   margin: auto;
+  border: solid rgba(211, 211, 211, 0.205) 1px;
 }
 .mysuggestion .background h2 {
   margin-top: 20px;

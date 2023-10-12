@@ -12,6 +12,7 @@
 
 * {
   box-sizing: border-box;
+  --sombre : #202b38;
 }
 
 /*   
@@ -45,12 +46,8 @@
   text-decoration: none;
 }
 
-.return-button:hover {
-  color: rgba(255, 61, 93, 255);
-}
-
 body {
-  background-color: black;
+  background-color: var(--sombre);
   display: flex;
   justify-content: center;
   align-items: center;
