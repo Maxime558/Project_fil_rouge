@@ -1,0 +1,26 @@
+{
+  "name": "project_fil_rouge",
+  "version": "0.1.0",
+  "description": "Project Fil Rouge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximeLottin/Project_fil_rouge.git"
+  },
+  "keywords": [
+    "Website",
+    "SocialMedia"
+  ],
+  "author": "Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaximeLottin/Project_fil_rouge/issues"
+  },
+  "homepage": "https://github.com/MaximeLottin/Project_fil_rouge#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
