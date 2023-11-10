@@ -22,5 +22,6 @@
   "homepage": "https://github.com/MaximeLottin/Project_fil_rouge#readme",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "type": "module"
 }

@@ -1,6 +1,7 @@
-const express = require('express')
-const http = require('http')
-const app = express()
+import express from 'express';
+import http from 'http';
+
+const app = express();
 
 const host = '127.0.0.1';
 const port = '8000';
