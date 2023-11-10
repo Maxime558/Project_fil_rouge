@@ -6,15 +6,14 @@
     <title>SuperConnect</title>
     <!-- Lien vers l'icône de la page -->
     <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="../assets/images/favicon.png"
-  />
-    <!-- Liens vers les feuilles de style CSS -->
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon.png"
+    />
+    <script src="https://kit.fontawesome.com/9eaaa05096.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <!-- Lien vers le script JavaScript avec l'attribut 'defer' -->
     <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
@@ -24,112 +23,54 @@
           <div class="logo-container">
             <ul>
               <li>
-                <!-- Logo de l'application -->
                 <img id="logo" src="./assets/images/logo.png" alt="logo" />
               </li>
               <li>
-                <!-- Icône pour la page d'accueil -->
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 576 512"
-                >
-                  <!-- Chemin SVG pour l'icône -->
-                  <path
-                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
-                  />
-                </svg>
-                <!-- Tooltip pour la page d'accueil -->
+                <i class="fa-solid fa-house fa-2xl"></i>
                 <div class="tooltip hidden">
                   <a href="#"></a>
                   <p>Accueil</p>
                 </div>
               </li>
               <li id="logohome">
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"
-                  />
-                </svg>
+                <i class="fa-regular fa-bell fa-2xl"></i>
                 <div id="notif" class="tooltip hidden">
                   <a href="#"></a>
                   <p>Notifications</p>
                 </div>
               </li>
               <li>
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                  />
-                </svg>
+                <i class="fa-regular fa-envelope fa-2xl"></i>
                 <div id="notif2" class="tooltip hidden">
                   <a href="#"></a>
                   <p>Messages</p>
                 </div>
               </li>
               <li>
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M384 48c8.8 0 16 7.2 16 16V448c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H384zM96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM240 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H208zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"
-                  />
-                </svg>
+                <i class="fa-regular fa-address-book fa-2xl"></i>
                 <div class="tooltip hidden">
                   <a href="#"></a>
                   <p>Contacts</p>
                 </div>
               </li>
               <li>
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 512 512"
-                  id="recherche"
-                >
-                  <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                  />
-                </svg>
+                <i id="recherche" class="fa-solid fa-magnifying-glass fa-2xl"></i>
                 <div id="notif3" class="tooltip hidden">
                   <a href="#"></a>
                   <p id="affichage-barre">Recherche</p>
                 </div>
               </li>
               <li id="correction-margin">
-                <svg
-                  class="logo-sidebar"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="2em"
-                  viewBox="0 0 448 512"
-                  id="connexion-icon"
-                >
-                  <path
-                    d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"
-                  />
-                </svg>
+                <i id="connexion-icon" class="fa-regular fa-user fa-2xl"></i>
                 <div id="notif4" class="tooltip hidden">
                   <p>Accès Membre</p>
                 </div>
                 <div id="connexion-menu" class="connexion-menu hidden">
                   <a href="./page/inscription.html"><p>Connexion</p></a>
                   <hr />
-                  <a href="./page/inscription.html?ajouterClasse=true"><p>Inscription</p></a>
+                  <a href="./page/inscription.html?ajouterClasse=true"
+                    ><p>Inscription</p></a
+                  >
                 </div>
               </li>
             </ul>
@@ -177,7 +118,7 @@
             </div>
           </div>
           <div class="message_user">
-             <!-- Message utilisateur 2 -->
+            <!-- Message utilisateur 2 -->
             <div class="message">
               <div class="message-image">
                 <img
@@ -297,7 +238,7 @@
               <h2>Suggestion</h2>
               <!-- Liste de suggestions -->
               <div class="mysuggestion">
-                 <!-- Suggestion utilisateur 1 -->
+                <!-- Suggestion utilisateur 1 -->
                 <div class="suggestion-container">
                   <img
                     src="./assets/images/logo_user6.jpg"
@@ -312,7 +253,7 @@
                 <hr />
               </div>
               <div class="mysuggestion">
-                 <!-- Suggestion utilisateur 2 -->
+                <!-- Suggestion utilisateur 2 -->
                 <div class="suggestion-container">
                   <img
                     src="./assets/images/logo_user1.jpg"
@@ -327,7 +268,7 @@
                 <hr />
               </div>
               <div class="mysuggestion">
-                 <!-- Suggestion utilisateur 3 -->
+                <!-- Suggestion utilisateur 3 -->
                 <div class="suggestion-container">
                   <img
                     src="./assets/images/logo_user4.jpg"
@@ -342,7 +283,7 @@
                 <hr />
               </div>
               <div id="last" class="mysuggestion">
-                 <!-- Suggestion utilisateur 4 --> 
+                <!-- Suggestion utilisateur 4 -->
                 <div class="suggestion-container">
                   <img
                     src="./assets/images/logo_user5.jpg"
