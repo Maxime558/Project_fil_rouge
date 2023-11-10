@@ -12,14 +12,12 @@ const tooltips = document.querySelectorAll(".tooltip");
 tooltips.forEach((tooltip) => {
   let timeoutId;
 
-  // Lorsque la souris survole l'élément parent, activez l'infobulle après un délai de 500 ms
   tooltip.parentElement.addEventListener("mouseover", () => {
     timeoutId = setTimeout(() => {
       tooltip.classList.add("active");
     }, 500);
   });
 
-  // Lorsque la souris quitte l'élément parent, annulez le délai et désactivez l'infobulle
   tooltip.parentElement.addEventListener("mouseout", () => {
     clearTimeout(timeoutId);
     tooltip.classList.remove("active");
@@ -33,7 +31,6 @@ tooltips.forEach((tooltip) => {
 // ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗██╔╝ ██╗██║╚██████╔╝██║ ╚████║
 // ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
                                                                                                                      
-// Sélectionnez l'icône de connexion et le menu de connexion
 const connexionIcon = document.getElementById("connexion-icon");
 const connexionMenu = document.getElementById("connexion-menu");
 const notif4 = document.getElementById("notif4");
